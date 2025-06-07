@@ -2,8 +2,10 @@ import telebot
 import openai
 import os
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_base = "https://openrouter.ai/api/v1"
+openai.organization = ""  # خالی بمونه
+openai.api_type = "open_ai"
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 openai.api_key = OPENAI_API_KEY
