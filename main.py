@@ -18,8 +18,7 @@ def handle_ask_command(message):
         return
 
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+        model="openrouter/openai/gpt-3.5-turbo"
             messages=[
                 {"role": "system", "content": "شما یک دستیار هوشمند هستید که به فارسی و انگلیسی پاسخ می‌دهید."},
                 {"role": "user", "content": user_input}
